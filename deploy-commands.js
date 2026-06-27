@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 // 1. Import the config.json file directly
-const { clientId, guildId, token } = require('./config.json');
+const { clientId, token } = require('./config.json');
 
 const commands = [];
 const commandsPath = path.join(__dirname, 'src\\commands'); 
@@ -28,7 +28,7 @@ const rest = new REST().setToken(token);
 
 		// 3. Pass clientId and guildId directly from your config
 		const data = await rest.put(
-			Routes.applicationGuildCommands(clientId, guildId),
+			Routes.applicationCommands(clientId),
 			{ body: commands },
 		);
 
