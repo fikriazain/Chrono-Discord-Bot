@@ -1,0 +1,22 @@
+## Node gitignore file
+
+config.json
+
+# Dependencies
+node_modules/
+
+# Environment variables (your secret token!)
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
